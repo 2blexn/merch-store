@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { ProductProvider } from './context/ProductContext';
 import { AdminProvider } from './context/AdminContext';
+import ScrollToTop from './components/ScrollToTop';
 import Header from './pages/layouts/Header/Header';
 import Footer from './pages/layouts/Footer/Footer';
 import Home from './pages/Home/Home';
@@ -19,6 +20,7 @@ function App() {
       <AdminProvider>
         <ProductProvider>
           <CartProvider>
+            <ScrollToTop />
             <div className="app">
               <Header />
               <main className="main-content">
